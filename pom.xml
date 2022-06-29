@@ -2,6 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.springframework.boot</groupId>
 	<artifactId>spring-boot-build</artifactId>
@@ -9,10 +10,13 @@
 	<packaging>pom</packaging>
 	<name>Spring Boot Build</name>
 	<description>Spring Boot Build</description>
+
 	<properties>
 		<revision>2.1.18.RELEASE</revision>
 		<main.basedir>${basedir}</main.basedir>
+		<disable.checks>true</disable.checks>
 	</properties>
+
 	<!-- Most elements are in profiles so they are stripped out during maven-flatten -->
 	<profiles>
 		<!-- Default profile for command line build -->
@@ -109,6 +113,7 @@
 				<!-- Samples are built via the invoker plugin -->
 				<module>spring-boot-samples-invoker</module>
 				<module>spring-boot-tests</module>
+				<module>spring-boot-samples</module>
 			</modules>
 		</profile>
 		<!-- M2E profile to allow easy import into Eclipse -->
