@@ -14,6 +14,7 @@
 	<properties>
 		<revision>2.1.18.RELEASE</revision>
 		<main.basedir>${basedir}</main.basedir>
+		<!-- 编译的时候将这个跳过打开 -->
 		<disable.checks>true</disable.checks>
 	</properties>
 
@@ -113,6 +114,7 @@
 				<!-- Samples are built via the invoker plugin -->
 				<module>spring-boot-samples-invoker</module>
 				<module>spring-boot-tests</module>
+				<!-- 编译的时候去掉此模块，测试例子的时候在将此模块加上 -->
 				<module>spring-boot-samples</module>
 			</modules>
 		</profile>
