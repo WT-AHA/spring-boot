@@ -1,13 +1,13 @@
-package com.aha.test;
+package com.aha.sample;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootMyTestApplication {
+public class SpringBootSampleApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootMyTestApplication.class, args);
+		SpringApplication.run(SpringBootSampleApplication.class, args);
 	}
 
 }
