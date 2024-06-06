@@ -48,6 +48,7 @@ settings.gradle.projectsLoaded {
 	}
 }
 
+// 包含的子项目的目录
 include "spring-boot-project:spring-boot-dependencies"
 include "spring-boot-project:spring-boot-parent"
 include "spring-boot-project:spring-boot-tools:spring-boot-antlib"
@@ -84,7 +85,9 @@ include "spring-boot-tests:spring-boot-integration-tests:spring-boot-server-test
 include "spring-boot-tests:spring-boot-integration-tests:spring-boot-sni-tests"
 include "spring-boot-system-tests:spring-boot-deployment-tests"
 include "spring-boot-system-tests:spring-boot-image-tests"
+include "spring-boot-sample:spring-boot-sample01"
 
+// 包含一个子模块下所有的模块
 file("${rootDir}/spring-boot-project/spring-boot-starters").eachDirMatch(~/spring-boot-starter.*/) {
 	include "spring-boot-project:spring-boot-starters:${it.name}"
 }
